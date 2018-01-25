@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Linq;
 using DATM_MainCenter.Views;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
@@ -24,7 +24,7 @@ namespace DATM_MainCenter
             // Handle when your app starts
 
 
-		    AppCenter.Start(credentials, typeof(Analytics), typeof(Crashes));
+		    AppCenter.Start(string.Join("",credentials.Split(',').Select(x => (char)Convert.ToInt32(x))), typeof(Analytics), typeof(Crashes));
         }
 
 		protected override void OnSleep ()
