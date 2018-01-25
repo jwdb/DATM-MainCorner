@@ -1,6 +1,9 @@
 ﻿using System;
 
 using DATM_MainCenter.Views;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using Xamarin.Forms;
 
 namespace DATM_MainCenter
@@ -18,8 +21,11 @@ namespace DATM_MainCenter
 
 		protected override void OnStart ()
 		{
-			// Handle when your app starts
-		}
+            // Handle when your app starts
+
+
+		    AppCenter.Start(credentials, typeof(Analytics), typeof(Crashes));
+        }
 
 		protected override void OnSleep ()
 		{
