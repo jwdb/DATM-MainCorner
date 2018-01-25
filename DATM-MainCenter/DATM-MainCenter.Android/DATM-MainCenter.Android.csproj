@@ -90,9 +90,9 @@
     <AndroidResource Include="Resources\drawable\xamarin_logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DATM_MainCenter\DATM_MainCenter.csproj">
-      <Project>{73360319-726C-4984-A8FC-CA753F0E266C}</Project>
-      <Name>DATM_MainCenter</Name>
+    <ProjectReference Include="..\DATM-MainCenter\DATM-MainCenter.csproj">
+      <Project>{68d52967-f443-4476-af35-dae12c3d0e17}</Project>
+      <Name>DATM-MainCenter</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
