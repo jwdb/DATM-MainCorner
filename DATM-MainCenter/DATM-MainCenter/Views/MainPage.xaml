@@ -4,7 +4,7 @@
             xmlns:views="clr-namespace:DATM_MainCenter.Views"
             x:Class="DATM_MainCenter.Views.MainPage">
     <TabbedPage.Children>
-        <NavigationPage Title="Browse">
+        <NavigationPage Title="News">
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS" Value="tab_feed.png"/>

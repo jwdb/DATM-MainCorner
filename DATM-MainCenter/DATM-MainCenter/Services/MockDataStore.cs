@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using System.Net;
+using System.Text;
+using System.Threading;
 using DATM_MainCenter.Models;
+using System.Net.NetworkInformation;
 
 [assembly: Xamarin.Forms.Dependency(typeof(DATM_MainCenter.Services.MockDataStore))]
 namespace DATM_MainCenter.Services
@@ -14,15 +17,14 @@ namespace DATM_MainCenter.Services
 
         public MockDataStore()
         {
+
             items = new List<Item>();
             var mockItems = new List<Item>
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Main site address", Description="Hosting a blog on datm.nl" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Minecraft Server", Description="Currently Running FTB Relevations on chibi.hunter2.nl:25565" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Plex Server", Description="Chibi and Micro are online" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Teamspeak", Description="ts.datm.nl" },
             };
 
             foreach (var item in mockItems)
